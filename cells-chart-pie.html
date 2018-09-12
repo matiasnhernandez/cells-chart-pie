@@ -1,0 +1,38 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="cells-chart-pie-styles.html">
+<script src="../chart.js/dist/Chart.bundle.js"></script>
+
+<!--
+`<cells-chart-pie>` description.
+
+Example:
+
+```html
+<cells-chart-pie></cells-chart-pie>
+```
+
+## Styling
+
+The following custom properties and mixins are available for styling:
+
+| Custom property | Description     | Default        |
+|:----------------|:----------------|:---------------|
+| --cells-chart-pie  | Mixin applied to :host     | {}  |
+| --cells-fontDefault  | Font family of :host    | sans-serif  |
+
+@customElement
+@polymer
+@demo demo/index.html
+-->
+<dom-module id="cells-chart-pie">
+  <template>
+    <style include="cells-chart-pie-styles cells-chart-pie-shared-styles"></style>
+    <slot></slot>
+    
+    <div id="canvas-holder">
+      <canvas id="myChart"></canvas>
+    </div>
+
+  </template>
+  <script src="cells-chart-pie.js"></script>
+</dom-module>
